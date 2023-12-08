@@ -1,0 +1,10 @@
+version: 0.0
+os: linux
+files: 
+  - source: /
+    desination: /var/www/html
+hooks:
+  AfterInstall:
+    - locationL scripts/set_owner
+      timeout: 5
+      runas: root
